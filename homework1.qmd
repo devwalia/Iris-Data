@@ -28,11 +28,11 @@ library(ggplot2)
 
 # Create the ggplot object with iris dataset
 ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + 
-  geom_point(size = 4, alpha = 0.9) + 
+  geom_point(size = 6, alpha = 0.9) + 
   ggtitle("Relationship Between Sepal Length & Sepal Width by Species") + 
   xlab("Sepal Length (cm)") + 
   ylab("Sepal Width (cm)") + 
-  scale_color_manual(values = c("setosa" = "purple", "versicolor" = "orange", "virginica" = "blue")) + 
+  scale_color_manual(values = c("setosa" = "pink", "versicolor" = "orange", "virginica" = "blue")) + 
   theme_minimal(base_size = 16) + 
   theme(
     plot.title = element_text(face = "bold", hjust = 0.5), 
