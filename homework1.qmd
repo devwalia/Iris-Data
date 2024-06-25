@@ -32,8 +32,8 @@ ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
   ggtitle("Relationship Between Sepal Length & Sepal Width by Species") + 
   xlab("Sepal Length (cm)") + 
   ylab("Sepal Width (cm)") + 
-  scale_color_manual(values = c("setosa" = "pink", "versicolor" = "orange", "virginica" = "blue")) + 
-  theme_minimal(base_size = 16) + 
+  scale_color_manual(values = c("setosa" = "pink", "versicolor" = "red", "virginica" = "green")) + 
+  theme_minimal(base_size = 15) + 
   theme(
     plot.title = element_text(face = "bold", hjust = 0.5), 
     axis.title = element_text(face = "italic"), 
@@ -51,3 +51,5 @@ Distinct species clusters highlight sepal dimensions as useful for species ident
 1.  **Setosa** (Smallest length, widest width)
 2.  **Versicolor** (Intermediate dimensions)
 3.  **Virginica** (Longest length, varied width), with each point colored by species.
+
+That is all about the Iris Data set where Setosa is the smallest length and Virginica is the longest one.
