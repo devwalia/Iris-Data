@@ -1,0 +1,53 @@
+---
+title: "Homework 1"
+author: "Dev Walia (23205184)"
+format:
+  pdf:
+    fontsize: 1.2em
+    toc: true
+    toc-title: '**Contents**'
+    embed-resources: true
+    grid:
+      body-width: 800px
+execute: 
+  eval: true
+  echo: false
+---
+
+## **Introduction**
+
+The iris dataset from R's datasets package includes measurements of various attributes for different iris species.
+
+Using ggplot2 in R, I created a scatter plot to show the relationship between Sepal Length and Sepal Width. The dataset consists of 150 observations, with 50 each for setosa, versicolor, and virginica.
+
+## **Plot**
+
+```{r, eval=TRUE, echo=FALSE, fig.height=9, fig.width=11}
+# Load necessary library
+library(ggplot2)
+
+# Create the ggplot object with iris dataset
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + 
+  geom_point(size = 4, alpha = 0.9) + 
+  ggtitle("Relationship Between Sepal Length & Sepal Width by Species") + 
+  xlab("Sepal Length (cm)") + 
+  ylab("Sepal Width (cm)") + 
+  scale_color_manual(values = c("setosa" = "purple", "versicolor" = "orange", "virginica" = "blue")) + 
+  theme_minimal(base_size = 16) + 
+  theme(
+    plot.title = element_text(face = "bold", hjust = 0.5), 
+    axis.title = element_text(face = "italic"), 
+    legend.title = element_text(face = "bold"), 
+  )
+
+```
+
+The plot above illustrates the relationship between Sepal Length and Sepal Width of iris flowers.
+
+## **Conclusion**
+
+Distinct species clusters highlight sepal dimensions as useful for species identification. The scatter plot shows the relationship between sepal length and width for three Iris species:
+
+1.  **Setosa** (Smallest length, widest width)
+2.  **Versicolor** (Intermediate dimensions)
+3.  **Virginica** (Longest length, varied width), with each point colored by species.
